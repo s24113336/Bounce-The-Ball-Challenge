@@ -1,0 +1,147 @@
+/* HUD Card Style */
+.hud-card {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 4px solid #f97316;
+}
+
+/* Circular Buttons (Pause/Audio) */
+.btn-icon {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border: 2px solid #334155;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white;
+}
+.btn-icon:hover {
+    background: #f97316;
+    border-color: #f97316;
+    transform: scale(1.05);
+}
+
+/* Full Screen Overlay */
+.screen-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.96);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* Tutorial Cards */
+.tutorial-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(30, 41, 59, 0.6);
+  padding: 1rem; 
+  border-radius: 1rem;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Input Field */
+.name-input {
+  background: #0f172a;
+  color: white;
+  border: 3px solid #f97316;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  outline: none;
+}
+
+/* Buttons */
+.btn-start {
+  background: #22c55e;
+  color: #052e16;
+  font-weight: 900;
+  padding: 1.25rem 4rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.btn-start:active { transform: scale(0.95); }
+
+.btn-exit {
+  background: #334155;
+  color: white;
+  font-weight: 800;
+  padding: 1.25rem 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.btn-neon {
+  background: linear-gradient(to bottom right, #f97316, #e11d48);
+  color: white;
+  font-weight: 800;
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Pause Menu Specific Buttons */
+.btn-menu {
+    font-weight: 900;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+.btn-menu:active { transform: scale(0.95); }
+
+/* Modal Styles */
+.modal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal-card {
+  background: #0f172a;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 1.5rem;
+  border: 2px solid #f97316;
+}
+.modal-header { background: #f97316; padding: 1rem; color: white; display: flex; justify-content: space-between; }
+
+/* --- POPPING SCORE ANIMATION --- */
+.floating-score {
+  position: absolute;
+  font-family: 'Arial', sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  pointer-events: none; /* Let clicks pass through */
+  animation: popUp 0.8s ease-out forwards;
+  z-index: 100;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+  -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+}
+
+@keyframes popUp {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  20% { transform: translate(-50%, -80%) scale(1.3); opacity: 1; }
+  100% { transform: translate(-50%, -250%) scale(1); opacity: 0; }
+}
